@@ -9,7 +9,7 @@
               <button class="button-vote" v-on:click="addnote">voter</button>
               <p> {{ movie.synopsys }}</p>
               <p> {{ movie.langue}}</p>
-              <p>{{ movie.genre }} </p>
+              <p>{{ movie.genre }} 
                <button class="button-remove" v-on:click="remove">Remove</button><button class="button-edit" v-on:click="edit">Edit</button></p>
             </div>
     </div>
@@ -34,12 +34,12 @@ export default{
     },
     computed: {
       moyenne: function(){
-        let not = this.movie.notes;
+        let arr = this.movie.notes;
         let moy = 0;
-        not.forEach(function(element) {
+        arr.forEach(function(element) {
           moy = moy + element;
         });
-        moy = moy /not.length;
+        moy = moy /arr.length;
         return moy.toFixed(1);
       }
     }

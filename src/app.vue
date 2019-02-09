@@ -10,7 +10,6 @@
         Année : <br /><input type="text" v-model="movie_to_add.year" /><br />
         Synopsys : <br /><textarea v-model="movie_to_add.synopsys"></textarea><br />
         genre : <br/><input v-model="movie_to_add.genre"><br />
-        note : <br/><input v-model="movie_to_add.note"><br />
         <button v-on:click="newmovie2">Add</button>
     </div>
     <input class="rechercheBar" type="text" v-model="search" placeholder="Search" /><p>Movie number : {{movies.length}}</p>
